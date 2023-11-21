@@ -71,18 +71,48 @@ The variables we will be working with are defined below.  If you want more detai
 mass_radius_scatter = ggplot(planets, aes(radius, mass)) + 
   geom_point() +
   geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) +
   geom_smooth(se=FALSE) +
   scale_y_log10() + scale_x_log10() +
   xlab("Radius (Earth Radius)") + 
   ylab("Mass (Earth Mass)") +
   ggtitle("Exoplanets mass vs. radius",
-          "Using NASA explanet archive data")
+          "Using NASA explanet archive data") +
+  theme_minimal()
 
 mass_radius_scatter
 ```
 
-### Observations
+#### Observations
 - The radius of exoplanets seem to be directly correlated to the mass
 - Informally, we can interpret the blue curve in the plot as a correlation between the mass and radius of an exoplanet
 - We can see a large cluster of exoplanets with a mass 100-1000 times the Earth's mass and  radius 10-20 times the Earth's radius.
 - There are some outliers, mostly with a significantly larger mass than radius.
+
+
+### Question: How is the Exoplanets Mass related to its Radius, and which Discovery Methods were most common in discovering these Exoplanets?
+
+> I will answer this question by making a scatter plot like the previous problem, but add the `color` aesthetic inside the `aes()` function and set it equal to `method` (discovery method). This will color each point according to which method was used to discover it.
+
+```{r}
+mass_radius_scatter_discovery = ggplot(planets, aes(radius, mass, color = method)) +
+  geom_point() +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) +
+  scale_y_log10() + scale_x_log10() +
+  xlab("Radius (Earth Radius)") + 
+  ylab("Mass (Earth Mass)") +
+  ggtitle("Exoplanets mass vs. radius",
+          "Using NASA explanet archive data") +
+  theme_minimal()
+
+mass_radius_scatter_discovery
+```
+
+#### Observations
+- As we can see in the plot, the majority of exoplanets were discovered through the Transit Method.
+  - We can see a large cluster of exoplanets with a mass 100-1000 times the Earth’s mass and radius 10-20 times the Earth’s radius primarily discovered by the Transit Method.
+- The Imaging Method is primarily used to find exoplanets with a radius less than 20 times the Earth's radius and a mass larger than 2000 times the Earth's Mass.
+- The Orbital Brightness Modulation Method is primarily used to find exoplanets with a similiar radius and mass to Earth's.
+- The Radial Velocity Method is used to find exoplanets with a wide variety of mass and radius. A majority of the exoplanets discovered with this method had a mass less than 10 times the Earth's mass, and a radius less than 3 times the Earth's radius.
+- The Transit Timing Variations Method is used to find exoplanets with a large variety of mass and radius compared to the Earth's mass and radius.
