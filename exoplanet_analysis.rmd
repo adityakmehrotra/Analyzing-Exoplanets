@@ -1,0 +1,88 @@
+---
+title: "Using ggplot2 to Analyze Lake Mendota"
+author: "Aditya Mehrotra"
+date: "2023-11-21"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      error = TRUE, fig.height = 4)
+library(tidyverse)
+library(lubridate)
+```
+
+## Exoplanet Data
+
+I will be working with data on exoplanets; exoplanets are planets orbiting stars outside our Solar System.  The data were pulled from the [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/index.html) on September 12, 2022.
+
+```{r read-data, echo = FALSE}
+## I will first begin my reading in the csv data file using read_csv()
+
+## Note: the raw file begins with a block of comment codes which begin with the character #
+## We can use the argument comment=# inside of read_csv() to delete form each input row any characters from # through the end of the line
+## The only trouble is that there is a variable disc_refname which is a URL and some of the URL values include a #.
+## Each of these rows is then corrupted as all columns after are treated as a comment
+## A dirty fix is to use skip=124 instead to skip the first 124 rows of the data set
+## This works for this data set, but the solution is not robust as a future form of the data may change the preface to the data and use a different number of comment rows before the actual data begins
+## In fact, last year, we skipped 100 rows, not 124.
+## Here, we use the skip=124 solution and hope to find a more robust solution in the future
+
+## The data set contains one row per confirmed exoplanet
+## The raw data has over 33,000 rows and 121 variables
+## We are only interested in a few variables and use some dplyr code to select a few of these variables
+## Also, the default names are not so nice to work with so we rename them.
+## For this assignment, we drop rows with missing data so the only remaining exoplanets have both a mass and a radius
+
+## This code fails to read in all the valid data due to some rows with # in the variable disc_refname or another containing a URL
+#planets = read_csv("../../data/exoplanet-confirmed_2022-09-12.csv",comment="#") %>%
+
+## Use this instead
+## Note that the drop_na() command reduces the data set to just over 1000 cases
+
+planets = read_csv("../../../data/exoplanet-confirmed_2022-09-12.csv", skip=124) %>%  
+  filter(default_flag == 1) %>% ## pick a single row for each unique exoplanet
+  select(pl_name, discoverymethod, disc_year, sy_pnum, pl_rade, pl_bmasse) %>%
+  rename(planet = pl_name,
+         method = discoverymethod,
+         year = disc_year,
+         number = sy_pnum,
+         radius = pl_rade,
+         mass = pl_bmasse) %>%
+  drop_na()
+```
+
+The variables we will be working with are defined below.  If you want more details, please see the exoplanet archive [data column definitions](https://exoplanetarchive.ipac.caltech.edu/docs/API_PS_columns.html) (using the column names in the raw data).
+
+`planet` = Planet Name
+`method` =  Method by which the planet was first identified
+`year` = Discovery Year (the year it was discovered)
+`number` = Number of Planets
+`radius` = Planet Radius (units: Earth Radius)
+`mass` = Approximate or Minimum Planet Mass (units: Earth Mass)
+
+
+
+### Question: How is the Exoplanets Mass related to its Radius?
+
+> I will answer this question by making a scatter plot with `radius` (the estimate of the planet radius) on the x-axis and `mass` (the estimate of the planet mass) on the vertical axis.  The `scale_y_log10()` and `scale_y_log10()` are added to change the axis values to a `log10()` scale.
+
+```{r}
+mass_radius_scatter = ggplot(planets, aes(radius, mass)) + 
+  geom_point() +
+  geom_hline(yintercept = 0) +
+  geom_smooth(se=FALSE) +
+  scale_y_log10() + scale_x_log10() +
+  xlab("Radius (Earth Radius)") + 
+  ylab("Mass (Earth Mass)") +
+  ggtitle("Exoplanets mass vs. radius",
+          "Using NASA explanet archive data")
+
+mass_radius_scatter
+```
+
+### Observations
+- The radius of exoplanets seem to be directly correlated to the mass
+- Informally, we can interpret the blue curve in the plot as a correlation between the mass and radius of an exoplanet
+- We can see a large cluster of exoplanets with a mass 100-1000 times the Earth's mass and  radius 10-20 times the Earth's radius.
+- There are some outliers, mostly with a significantly larger mass than radius.
