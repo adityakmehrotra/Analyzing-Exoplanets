@@ -116,3 +116,26 @@ mass_radius_scatter_discovery
 - The Orbital Brightness Modulation Method is primarily used to find exoplanets with a similiar radius and mass to Earth's.
 - The Radial Velocity Method is used to find exoplanets with a wide variety of mass and radius. A majority of the exoplanets discovered with this method had a mass less than 10 times the Earth's mass, and a radius less than 3 times the Earth's radius.
 - The Transit Timing Variations Method is used to find exoplanets with a large variety of mass and radius compared to the Earth's mass and radius.
+
+
+### Question: How many Exoplanets were Discorvered Using each Method?
+
+> I will answer this question by making a barplot counting how many exoplanets were discovered using each method. It is important to know to use `geom_bar()`, which counts the number of occurences, unlike `geom_col()`.
+
+```{r}
+method_count = ggplot(planets, aes(method, fill = method)) + 
+  geom_bar() +
+  xlab("Method") + 
+  ylab("Count") +
+  ggtitle("Number of discoveries by method",
+          "Using NASA explanet archive data") +
+  theme(axis.text.x = element_text(angle = 45, hjust=1))
+
+method_count
+```
+
+#### Observations
+- As we can see in the barplot, the clear majority of discoveries was made with the Transit Method.
+- The next Method used the most to discover exoplanets was the Imaging Method followed closely by the Radial Velocity Method.
+- The Transit Timing Variaions Method was used to discover very few exoplanets.
+- The Orbital Brightness Modulation Method was used to discover even fewer exoplanets, and the least among all of the five methods.
