@@ -54,12 +54,12 @@ planets = read_csv("../../../data/exoplanet-confirmed_2022-09-12.csv", skip=124)
 
 The variables we will be working with are defined below.  If you want more details, please see the exoplanet archive [data column definitions](https://exoplanetarchive.ipac.caltech.edu/docs/API_PS_columns.html) (using the column names in the raw data).
 
-`planet` = Planet Name
-`method` =  Method by which the planet was first identified
-`year` = Discovery Year (the year it was discovered)
-`number` = Number of Planets
-`radius` = Planet Radius (units: Earth Radius)
-`mass` = Approximate or Minimum Planet Mass (units: Earth Mass)
+- `planet` = Planet Name
+- `method` =  Method by which the planet was first identified
+- `year` = Discovery Year (the year it was discovered)
+- `number` = Number of Planets
+- `radius` = Planet Radius (units: Earth Radius)
+- `mass` = Approximate or Minimum Planet Mass (units: Earth Mass)
 
 
 
