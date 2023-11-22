@@ -35,3 +35,9 @@ The variables we will be working with are defined below.  If you want more detai
 <img width="681" alt="Screen Shot 2023-11-22 at 1 47 39 PM" src="https://github.com/adityakmehrotra/Analyzing-Exoplanets/assets/24847438/7058178b-78b6-4c5e-8334-323f2038bb0b">
 
 ### Observations
+- As we can see in the plot, the majority of exoplanets were discovered through the Transit Method.
+  - We can see a large cluster of exoplanets with a mass 100-1000 times the Earth’s mass and radius 10-20 times the Earth’s radius primarily discovered by the Transit Method.
+- The Imaging Method is primarily used to find exoplanets with a radius less than 20 times the Earth's radius and a mass larger than 2000 times the Earth's Mass.
+- The Orbital Brightness Modulation Method is primarily used to find exoplanets with a similiar radius and mass to Earth's.
+- The Radial Velocity Method is used to find exoplanets with a wide variety of mass and radius. A majority of the exoplanets discovered with this method had a mass less than 10 times the Earth's mass, and a radius less than 3 times the Earth's radius.
+- The Transit Timing Variations Method is used to find exoplanets with a large variety of mass and radius compared to the Earth's mass and radius.
