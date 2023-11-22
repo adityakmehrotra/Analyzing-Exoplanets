@@ -23,3 +23,10 @@ The variables we will be working with are defined below.  If you want more detai
 
 ### Question: How is the Exoplanets Mass related to its Radius?
 <img width="679" alt="Screen Shot 2023-11-22 at 1 44 55 PM" src="https://github.com/adityakmehrotra/Analyzing-Exoplanets/assets/24847438/0ae79486-c512-4bb6-9efd-931ccabef264">
+
+#### Observations
+- The radius of exoplanets seem to be directly correlated to the mass
+- Informally, we can interpret the blue curve in the plot as a correlation between the mass and radius of an exoplanet
+- We can see a large cluster of exoplanets with a mass 100-1000 times the Earth's mass and  radius 10-20 times the Earth's radius.
+- There are some outliers, mostly with a significantly larger mass than radius.
+
