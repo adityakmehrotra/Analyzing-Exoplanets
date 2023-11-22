@@ -30,3 +30,8 @@ The variables we will be working with are defined below.  If you want more detai
 - We can see a large cluster of exoplanets with a mass 100-1000 times the Earth's mass and  radius 10-20 times the Earth's radius.
 - There are some outliers, mostly with a significantly larger mass than radius.
 
+
+## Question: How is the Exoplanets Mass related to its Radius, and which Discovery Methods were most common in discovering these Exoplanets?
+<img width="681" alt="Screen Shot 2023-11-22 at 1 47 39 PM" src="https://github.com/adityakmehrotra/Analyzing-Exoplanets/assets/24847438/7058178b-78b6-4c5e-8334-323f2038bb0b">
+
+### Observations
