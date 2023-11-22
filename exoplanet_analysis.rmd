@@ -139,3 +139,43 @@ method_count
 - The next Method used the most to discover exoplanets was the Imaging Method followed closely by the Radial Velocity Method.
 - The Transit Timing Variaions Method was used to discover very few exoplanets.
 - The Orbital Brightness Modulation Method was used to discover even fewer exoplanets, and the least among all of the five methods.
+
+
+### Question: What is the distribution of the masses of exoplanets in the dataset
+
+> I will answer this question by making a histogram showing the distribution of the base-10 log of the masses in the dataset.
+
+```{r}
+mass_distribution = ggplot(planets, aes(x = log10(mass))) + 
+  geom_histogram(fill = "lightblue", color = "black") +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = quantile(log10(planets$mass), probs = c(0.50)),
+             color = "red", linetype = "dotted") +
+  geom_vline(xintercept = quantile(log10(planets$mass), probs = c(0.25, 0.75)),
+             color = "red", linetype = "dashed") +
+  geom_vline(xintercept = quantile(log10(planets$mass), probs = c(0.10, 0.90)),
+             color = "red", linetype = "solid") +
+  xlab("Mass") + 
+  ylab("Count") +
+  ggtitle("Histogram of log masses of exoplanets",
+          "Using NASA explanet archive data")
+
+mass_distribution
+
+log10(min(planets$mass))
+log10(max(planets$mass))
+log10(median(planets$mass))
+log10(mean(planets$mass))
+log10(sd(planets$mass))
+```
+
+#### Observations
+- Because we are showing the distribution of the masses in base-10 log, there are some negative values
+- The dotted red line in the bar plot represents the mean (50% quantile) of the mass of exoplanets discovered.
+- The dashed red line in the bar plot represents the 25% and 75% quantile of the mass of exoplanets discovered.
+- The solid red line in the bar plot represents the 10% and 90% quantile of the mass of exoplanets discovered.
+- We can see that the minimum mass of an exoplanet discovered in base-10 log is approximately -1.18.
+- We can see that the maximum mass of an exoplanet discovered in base-10 log is approximately 3.98.
+- We can see that the median mass of an exoplanet discovered in base-10 log is approximately 2.15.
+- We can see that the mean mass of an exoplanet discovered in base-10 log is approximately 2.64.
+- We can see that the standard deviation of the mass of an exoplanet discovered in base-10 log is approximately 2.99.
