@@ -52,3 +52,5 @@ The variables we will be working with are defined below.  If you want more detai
 - The Transit Timing Variaions Method was used to discover very few exoplanets.
 - The Orbital Brightness Modulation Method was used to discover even fewer exoplanets, and the least among all of the five methods.
 
+
+## Question: What is the distribution of the masses of exoplanets in the dataset
