@@ -54,3 +54,4 @@ The variables we will be working with are defined below.  If you want more detai
 
 
 ## Question: What is the distribution of the masses of exoplanets in the dataset
+<img width="690" alt="Screen Shot 2023-11-23 at 10 50 48 PM" src="https://github.com/adityakmehrotra/Analyzing-Exoplanets/assets/24847438/86a1f79a-ba00-46bc-b104-1ab975825a5a">
