@@ -41,3 +41,9 @@ The variables we will be working with are defined below.  If you want more detai
 - The Orbital Brightness Modulation Method is primarily used to find exoplanets with a similiar radius and mass to Earth's.
 - The Radial Velocity Method is used to find exoplanets with a wide variety of mass and radius. A majority of the exoplanets discovered with this method had a mass less than 10 times the Earth's mass, and a radius less than 3 times the Earth's radius.
 - The Transit Timing Variations Method is used to find exoplanets with a large variety of mass and radius compared to the Earth's mass and radius.
+
+
+## Question: How many Exoplanets were Discorvered Using each Method?
+<img width="678" alt="Screen Shot 2023-11-23 at 10 51 10 PM" src="https://github.com/adityakmehrotra/Analyzing-Exoplanets/assets/24847438/100e0d03-3187-4372-89c5-f2d246018136">
+
+### Observations
