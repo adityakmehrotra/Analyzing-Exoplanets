@@ -55,3 +55,14 @@ The variables we will be working with are defined below.  If you want more detai
 
 ## Question: What is the distribution of the masses of exoplanets in the dataset
 <img width="690" alt="Screen Shot 2023-11-23 at 10 50 48 PM" src="https://github.com/adityakmehrotra/Analyzing-Exoplanets/assets/24847438/86a1f79a-ba00-46bc-b104-1ab975825a5a">
+
+### Observations
+- Because we are showing the distribution of the masses in base-10 log, there are some negative values
+- The dotted red line in the bar plot represents the mean (50% quantile) of the mass of exoplanets discovered.
+- The dashed red line in the bar plot represents the 25% and 75% quantile of the mass of exoplanets discovered.
+- The solid red line in the bar plot represents the 10% and 90% quantile of the mass of exoplanets discovered.
+- We can see that the minimum mass of an exoplanet discovered in base-10 log is approximately -1.18.
+- We can see that the maximum mass of an exoplanet discovered in base-10 log is approximately 3.98.
+- We can see that the median mass of an exoplanet discovered in base-10 log is approximately 2.15.
+- We can see that the mean mass of an exoplanet discovered in base-10 log is approximately 2.64.
+- We can see that the standard deviation of the mass of an exoplanet discovered in base-10 log is approximately 2.99.
