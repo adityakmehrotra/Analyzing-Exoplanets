@@ -47,3 +47,8 @@ The variables we will be working with are defined below.  If you want more detai
 <img width="678" alt="Screen Shot 2023-11-23 at 10 51 10 PM" src="https://github.com/adityakmehrotra/Analyzing-Exoplanets/assets/24847438/100e0d03-3187-4372-89c5-f2d246018136">
 
 ### Observations
+- As we can see in the barplot, the clear majority of discoveries was made with the Transit Method.
+- The next Method used the most to discover exoplanets was the Imaging Method followed closely by the Radial Velocity Method.
+- The Transit Timing Variaions Method was used to discover very few exoplanets.
+- The Orbital Brightness Modulation Method was used to discover even fewer exoplanets, and the least among all of the five methods.
+
