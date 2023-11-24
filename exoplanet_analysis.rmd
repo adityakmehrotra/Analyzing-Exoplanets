@@ -40,7 +40,7 @@ I will be working with data on exoplanets; exoplanets are planets orbiting stars
 ## Use this instead
 ## Note that the drop_na() command reduces the data set to just over 1000 cases
 
-planets = read_csv("../../../data/exoplanet-confirmed_2022-09-12.csv", skip=124) %>%  
+planets = read_csv("exoplanet-confirmed_2022-09-12.csv", skip=124) %>%  
   filter(default_flag == 1) %>% ## pick a single row for each unique exoplanet
   select(pl_name, discoverymethod, disc_year, sy_pnum, pl_rade, pl_bmasse) %>%
   rename(planet = pl_name,
