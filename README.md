@@ -66,3 +66,4 @@ The variables we will be working with are defined below.  If you want more detai
 - We can see that the median mass of an exoplanet discovered in base-10 log is approximately 2.15.
 - We can see that the mean mass of an exoplanet discovered in base-10 log is approximately 2.64.
 - We can see that the standard deviation of the mass of an exoplanet discovered in base-10 log is approximately 2.99.
+
