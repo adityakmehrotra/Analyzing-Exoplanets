@@ -31,7 +31,7 @@ The variables we will be working with are defined below. If you want more detail
 - `exoplanet_analysis.rmd`
   - R Markdown (RMD) File
 - `exoplanet_analysis.html`
-  - dlkjdf
+  - HTML File
 - `script.R`
   - jlkds
 
