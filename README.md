@@ -33,7 +33,7 @@ The variables we will be working with are defined below. If you want more detail
 - `exoplanet_analysis.html`
   - HTML File
 - `script.R`
-  - jlkds
+  - R Script File
 
 ## Question: How is the Exoplanets Mass related to its Radius?
 
