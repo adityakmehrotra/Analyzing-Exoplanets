@@ -33,7 +33,7 @@ The variables we will be working with are defined below. If you want more detail
   - Contains all of the analysis on exoplanets
 - `exoplanet_analysis.html`
   - HTML File
-  - Contains
+  - Contains all of the analysis on exoplanets
 - `script.R`
   - R Script File
 
