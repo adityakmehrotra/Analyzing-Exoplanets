@@ -30,8 +30,10 @@ The variables we will be working with are defined below. If you want more detail
   - Contains all of the exoplanet data we will be analyzing.
 - `exoplanet_analysis.rmd`
   - R Markdown (RMD) File
+  - Contains all of the analysis on exoplanets
 - `exoplanet_analysis.html`
   - HTML File
+  - Contains
 - `script.R`
   - R Script File
 
