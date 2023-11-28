@@ -24,6 +24,11 @@ The variables we will be working with are defined below. If you want more detail
 - `radius` = Planet Radius (units: Earth Radius)
 - `mass` = Approximate or Minimum Planet Mass (units: Earth Mass)
 
+## Files
+- ``
+  - Data File
+  - Contains all of the exoplanet data we will be analyzing.
+
 ## Question: How is the Exoplanets Mass related to its Radius?
 
 <img width="679" alt="Screen Shot 2023-11-22 at 1 44 55 PM" src="https://github.com/adityakmehrotra/Analyzing-Exoplanets/assets/24847438/0ae79486-c512-4bb6-9efd-931ccabef264">
