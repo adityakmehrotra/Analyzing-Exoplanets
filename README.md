@@ -36,6 +36,7 @@ The variables we will be working with are defined below. If you want more detail
   - Contains all of the analysis on exoplanets
 - `script.R`
   - R Script File
+  - Contains the script to run the files
 
 ## Question: How is the Exoplanets Mass related to its Radius?
 
