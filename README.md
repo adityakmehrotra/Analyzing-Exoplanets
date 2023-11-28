@@ -25,9 +25,15 @@ The variables we will be working with are defined below. If you want more detail
 - `mass` = Approximate or Minimum Planet Mass (units: Earth Mass)
 
 ## Files
-- ``
+- `exoplanet-confirmed_2022-09-12.csv`
   - Data File
   - Contains all of the exoplanet data we will be analyzing.
+- `exoplanet_analysis.rmd`
+  - R Markdown (RMD) File
+- `exoplanet_analysis.html`
+  - dlkjdf
+- `script.R`
+  - jlkds
 
 ## Question: How is the Exoplanets Mass related to its Radius?
 
