@@ -94,3 +94,6 @@ The variables we will be working with are defined below. If you want more detail
 Knit the rmd file (`exoplanet_analysis.rmd`) with the data file (`exoplanet-confirmed_2022-09-12.csv`) and script file (`script.R`) downloaded to get an outputted HTML file (`exoplanet_analysis.html`) with my results.
 
 All of these files are in the current repository.
+
+### Last Updated
+04/13/2024
